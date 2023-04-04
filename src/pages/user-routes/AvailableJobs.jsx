@@ -118,7 +118,7 @@ const AvailableJobs = () => {
        <div className="mx-5">
         <h1 style={{textAlign: 'center', marginTop: '10px'}}>Job Openings</h1>
         <div className="my-3">
-          <Input type="text" placeholder="Search by title, company, location or skills" onChange={handleSearch}/>
+          <Input type="text" placeholder="Search by title, company, location or skill" onChange={handleSearch}/>
         </div>
         <Table bordered dark hover responsive size="" striped >
             <thead>
