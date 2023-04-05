@@ -92,7 +92,13 @@ const Signup = () => {
       })
       navigate("/login")
      }).catch((error) => {
-      console.log("Raw error: ",error)
+      // console.log("Raw error: ",error)
+
+      if(error.message === 'Network Error') {
+        toast.error("Something went wrong on server! Please try later")
+        return
+      }  
+
       // console.log("error log")
 
       // console.log("Exact errors separated: ",error.response?.data?.errors)
@@ -112,7 +118,7 @@ const Signup = () => {
         return acc;
       }, {})
 
-      console.log("Final Customized: ",errorsCustomized)
+      // console.log("Final Customized: ",errorsCustomized)
 
       setErrObj(errorsCustomized)
 
