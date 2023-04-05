@@ -81,14 +81,15 @@ const MyJobs = () => {
         .then(res => {
             if(res.ok) {
                 const newPosts = posts.filter(item => item.jobId !== jobId);
+                toast.success("Job deleted successfully!")
                 setPosts(newPosts)
             }
             else {
-                toast.error('Error deleting job. Message: ', res.statusText)
+              toast.error('Error deleting job')
             }
         }).catch(err => {
             console.log(err)
-            toast.error('Error deleting job. Message: ', err)
+            toast.error('Error deleting job!')
         })
     }
 
